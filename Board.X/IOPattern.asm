@@ -16,8 +16,7 @@ Start:
 MainLoop:
     BTG PORTA,RA7 ;Toggle PORTA PIN 7(LED's)
 Delay:
-    DECFSZ Delay1,1 ;Decrement Delay1 by 1, skip next instruction if 
-    Delay1 is 0
+    DECFSZ Delay1,1 ;Decrement Delay1 by 1, skip next instruction if Delay1 is 0
     GOTO Delay
     DECFSZ Delay2,1
     GOTO Delay
