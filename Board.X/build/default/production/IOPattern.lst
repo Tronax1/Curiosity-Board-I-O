@@ -1,4 +1,4 @@
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  1
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -38,15 +38,18 @@ Warning[205]: Found directive in column 1. (org)
 000004 6A89           00015     CLRF LATA
 000006                00016 MainLoop:
 000006 7E80           00017     BTG PORTA,RA7 ;Toggle PORTA PIN 7(LED's)
-000008                00018 Delay:
-000008 2E00           00019     DECFSZ Delay1,1 ;Decrement Delay1 by 1, skip next instruction if Delay1 is 0
-00000A EF?? F???      00020     GOTO Delay
-00000E 2E02           00021     DECFSZ Delay2,1
-000010 EF?? F???      00022     GOTO Delay
-000014 EF?? F???      00023     GOTO MainLoop
+000008 7C80           00018     BTG PORTA,RA6 ;Toggle PORTA PIN 7(LED's)
+00000A 7A80           00019     BTG PORTA,RA5 ;Toggle PORTA PIN 7(LED's)
+00000C 7880           00020     BTG PORTA,RA4 ;Toggle PORTA PIN 7(LED's)
+00000E                00021 Delay:
+00000E 2E00           00022     DECFSZ Delay1,1 ;Decrement Delay1 by 1, skip next instruction if Delay1 is 0
+000010 EF?? F???      00023     GOTO Delay
+000014 2E02           00024     DECFSZ Delay2,1
+000016 EF?? F???      00025     GOTO Delay
+00001A EF?? F???      00026     GOTO MainLoop
 Warning[205]: Found directive in column 1. (end)
-                      00024 end
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  2
+                      00027 end
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  2
 
 
 SYMBOL TABLE
@@ -105,7 +108,7 @@ AHEN                              00000001
 AN0                               00000000
 AN1                               00000001
 AN2                               00000002
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  3
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  3
 
 
 SYMBOL TABLE
@@ -164,7 +167,7 @@ BRG12                             00000004
 BRG13                             00000005
 BRG14                             00000006
 BRG15                             00000007
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  4
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  4
 
 
 SYMBOL TABLE
@@ -223,7 +226,7 @@ CCP1ASE                           00000007
 CCP1CON                           00000FBD
 CCP1IE                            00000002
 CCP1IF                            00000002
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  5
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  5
 
 
 SYMBOL TABLE
@@ -282,7 +285,7 @@ CRC16EE                           00000002
 CRC16EF                           00000002
 CRC5EE                            00000001
 CRC5EF                            00000001
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  6
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  6
 
 
 SYMBOL TABLE
@@ -331,7 +334,7 @@ DIR                               00000002
 DONE                              00000001
 DTRXP                             00000005
 D_NOT_A                           00000005
-Delay                             00000008
+Delay                             0000000E
 Delay1                            00000000
 Delay2                            00000002
 ECCP1AS                           00000FB6
@@ -341,7 +344,7 @@ ECCP1AS2                          00000006
 ECCP1ASE                          00000007
 ECCP1CON                          00000FBD
 ECCP1DEL                          00000FB7
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  7
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  7
 
 
 SYMBOL TABLE
@@ -400,7 +403,7 @@ FSR1L                             00000FE1
 FSR2                              00000002
 FSR2H                             00000FDA
 FSR2L                             00000FD9
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  8
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  8
 
 
 SYMBOL TABLE
@@ -459,7 +462,7 @@ INTCON                            00000FF2
 INTCON2                           00000FF1
 INTCON3                           00000FF0
 INTEDG0                           00000006
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE  9
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE  9
 
 
 SYMBOL TABLE
@@ -518,7 +521,7 @@ LATB4                             00000004
 LATB5                             00000005
 LATB6                             00000006
 LATB7                             00000007
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 10
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 10
 
 
 SYMBOL TABLE
@@ -577,7 +580,7 @@ OSCCON                            00000FD3
 OSCCON2                           00000FD2
 OSCFIE                            00000007
 OSCFIF                            00000007
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 11
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 11
 
 
 SYMBOL TABLE
@@ -636,7 +639,7 @@ PORTE                             00000F84
 POSTDEC0                          00000FED
 POSTDEC1                          00000FE5
 POSTDEC2                          00000FDD
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 12
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 12
 
 
 SYMBOL TABLE
@@ -695,7 +698,7 @@ RC1IF                             00000005
 RC1IP                             00000005
 RC2                               00000002
 RC4                               00000004
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 13
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 13
 
 
 SYMBOL TABLE
@@ -754,7 +757,7 @@ SLRB                              00000001
 SLRC                              00000002
 SLRCON                            00000F7A
 SLRD                              00000003
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 14
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 14
 
 
 SYMBOL TABLE
@@ -813,7 +816,7 @@ SSP1ADD3                          00000003
 SSP1ADD4                          00000004
 SSP1ADD5                          00000005
 SSP1ADD6                          00000006
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 15
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 15
 
 
 SYMBOL TABLE
@@ -872,7 +875,7 @@ STMD                              00000004
 STOR                              00000001
 STR1A                             00000000
 STR1B                             00000001
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 16
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 16
 
 
 SYMBOL TABLE
@@ -931,7 +934,7 @@ T2CON                             00000FBA
 T2OUTPS0                          00000003
 T2OUTPS1                          00000004
 T2OUTPS2                          00000005
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 17
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 17
 
 
 SYMBOL TABLE
@@ -990,7 +993,7 @@ TMR2IP                            00000001
 TMR2MD                            00000001
 TMR2ON                            00000002
 TMR3                              00000FB2
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 18
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 18
 
 
 SYMBOL TABLE
@@ -1049,7 +1052,7 @@ TRISD2                            00000002
 TRISD3                            00000003
 TRISD4                            00000004
 TRISD5                            00000005
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 19
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 19
 
 
 SYMBOL TABLE
@@ -1108,7 +1111,7 @@ UEP2                              00000F6C
 UEP3                              00000F6D
 UEP4                              00000F6E
 UEP5                              00000F6F
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 20
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 20
 
 
 SYMBOL TABLE
@@ -1167,7 +1170,7 @@ _BOREN_NOSLP_2L                   000000FD
 _BOREN_OFF_2L                     000000F9
 _BOREN_ON_2L                      000000FB
 _BOREN_SBORDIS_2L                 000000FF
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 21
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 21
 
 
 SYMBOL TABLE
@@ -1226,7 +1229,7 @@ _EBTRB_ON_7H                      000000BF
 _FCMEN_OFF_1H                     000000BF
 _FCMEN_ON_1H                      000000FF
 _FOSC_ECHCLKO_1H                  000000F4
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 22
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 22
 
 
 SYMBOL TABLE
@@ -1285,7 +1288,7 @@ _WDTPS_16384_2H                   000000FB
 _WDTPS_16_2H                      000000D3
 _WDTPS_1_2H                       000000C3
 _WDTPS_2048_2H                    000000EF
-MPASM 5.84                     IOPATTERN.ASM   5-20-2019  21:26:45         PAGE 23
+MPASM 5.84                     IOPATTERN.ASM   5-22-2019  16:27:42         PAGE 23
 
 
 SYMBOL TABLE

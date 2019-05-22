@@ -15,6 +15,9 @@ Start:
     CLRF LATA
 MainLoop:
     BTG PORTA,RA7 ;Toggle PORTA PIN 7(LED's)
+    BTG PORTA,RA6 ;Toggle PORTA PIN 7(LED's)
+    BTG PORTA,RA5 ;Toggle PORTA PIN 7(LED's)
+    BTG PORTA,RA4 ;Toggle PORTA PIN 7(LED's)
 Delay:
     DECFSZ Delay1,1 ;Decrement Delay1 by 1, skip next instruction if Delay1 is 0
     GOTO Delay
