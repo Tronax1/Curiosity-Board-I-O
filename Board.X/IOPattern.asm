@@ -13,11 +13,21 @@ Start:
     CLRF TRISA
     CLRF PORTA
     CLRF LATA
+    CLRF PORTB
 MainLoop:
     BTG PORTA,RA7 ;Toggle PORTA PIN 7(LED's)
     BTG PORTA,RA6 ;Toggle PORTA PIN 7(LED's)
     BTG PORTA,RA5 ;Toggle PORTA PIN 7(LED's)
     BTG PORTA,RA4 ;Toggle PORTA PIN 7(LED's)
+    BTFSS PORTB, RB4
+    GOTO MainLoop
+    GOTO Delay
+    
+OtherPattern:
+    BTG PORTA,RA7 ;Toggle PORTA PIN 7(LED's)
+    BTG PORTA,RA6 ;Toggle PORTA PIN 7(LED's)
+    GOTO OtherPattern
+    
 Delay:
     DECFSZ Delay1,1 ;Decrement Delay1 by 1, skip next instruction if Delay1 is 0
     GOTO Delay
