@@ -19,9 +19,9 @@ MainLoop:
     BTG PORTA,RA6 ;Toggle PORTA PIN 7(LED's)
     BTG PORTA,RA5 ;Toggle PORTA PIN 7(LED's)
     BTG PORTA,RA4 ;Toggle PORTA PIN 7(LED's)
-    BTFSS PORTB, RB4
-    GOTO MainLoop
+    BTFSS PORTB, RB4 ; If button is pressed, go to other label
     GOTO Delay
+    GOTO MainLoop
     
 OtherPattern:
     BTG PORTA,RA7 ;Toggle PORTA PIN 7(LED's)
